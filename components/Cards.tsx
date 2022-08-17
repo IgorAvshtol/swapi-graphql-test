@@ -28,7 +28,7 @@ export function Cards() {
             data?.allPeople?.people?.map(card => <Card key={card!.name} name={card!.name} id={card!.id}/>)
           }
         </div>
-        {data?.allPeople?.people?.length < data?.allPeople?.totalCount
+        {data && data?.allPeople?.people?.length < data?.allPeople?.totalCount
             && <div className='w-full flex justify-center'>
               <button
                   className='mt-20 w-40 border-2 border-gray-400 rounded-lg text-2xl text-amber-50 hover:text-amber-200 hover:border-transparent'
